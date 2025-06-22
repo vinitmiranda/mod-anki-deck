@@ -22,7 +22,7 @@ col = Collection(
 )
 
 character_meanings = load_character_meanings("cedict_ts.u8")
-note_type = "HSK"
+note_type = "Vocabulary"
 note_model = col.models.by_name(note_type)
 note_ids = col.models.nids(note_model)
 for nid in note_ids:
