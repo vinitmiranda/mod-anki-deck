@@ -1,0 +1,80 @@
+<div class="hanzi">
+    {{Simplified}}
+    <hr>
+    {{Traditional}}
+</div>
+<div class="normal">
+    <font size=2><br>
+        {{Audio}}
+        <br>
+        <br>
+</div>
+
+<div class="normal">
+    {{Pinyin}}
+    <hr>
+    <br>
+    {{Translation}}
+    <hr>
+
+    <div class="normal">
+        <button onclick="toggleTranslations()">Show Translations</button>
+        <button onclick="togglePinyin()">Show Pinyin</button>
+
+        <div>
+            <hr>
+            {{Sentence 1}}
+            <br>
+            <div class="pinyin" style="display: none;">{{Pinyin 1}}</div>
+            <div class="translation" style="display: none;">{{Translation 1}}</div>
+            <hr>
+            {{Sentence 2}}
+            <br>
+            <div class="pinyin" style="display: none;">{{Pinyin 2}}</div>
+            <div class="translation" style="display: none;">{{Translation 2}}</div>
+            <hr>
+            {{Sentence 3}}
+            <br>
+            <div class="pinyin" style="display: none;">{{Pinyin 3}}</div>
+            <div class="translation" style="display: none;">{{Translation 3}}</div>
+            <hr>
+            {{Sentence 4}}
+            <br>
+            <div class="pinyin" style="display: none;">{{Pinyin 4}}</div>
+            <div class="translation" style="display: none;">{{Translation 4}}</div>
+            <hr>
+            {{Sentence 5}}
+            <br>
+            <div class="pinyin" style="display: none;">{{Pinyin 5}}</div>
+            <div class="translation" style="display: none;">{{Translation 5}}</div>
+            <hr>
+        </div>
+
+    </div>
+    <br>
+    <font color=#949494 size=2>
+        Similar-sounding words:
+    </font>
+    {{Similar}}
+    <br><br>
+    <hr><br>
+</div>
+
+<script>
+    function toggleTranslations() {
+        // Get all elements with the class "translation"
+        const translations = document.getElementsByClassName("translation");
+        for (let i = 0; i < translations.length; i++) {
+            // Toggle the display property for each translation
+            translations[i].style.display = translations[i].style.display === "none" ? "block" : "none";
+        }
+    }
+    function togglePinyin() {
+        // Get all elements with the class "pinyin"
+        const pinyin = document.getElementsByClassName("pinyin");
+        for (let i = 0; i < pinyin.length; i++) {
+            // Toggle the display property for each pinyin
+            pinyin[i].style.display = pinyin[i].style.display === "none" ? "block" : "none";
+        }
+    }
+</script>
